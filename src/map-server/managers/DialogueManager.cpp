@@ -4,7 +4,7 @@
 #include "NPCManager.hpp"
 #include "ShopManager.hpp"
 #include "core/database/DialogueDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <nlohmann/json.hpp>
 
 namespace Murim {

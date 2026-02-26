@@ -4,7 +4,7 @@
 #include "shared/character/CharacterManager.hpp"
 #include "shared/item/ItemManager.hpp"
 #include "core/database/ShopDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace MapServer {

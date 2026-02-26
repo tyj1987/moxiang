@@ -2,7 +2,7 @@
 #include "core/network/NotificationService.hpp"
 // #include "shared/battle/BuffManager.hpp"  // TODO: Create BuffManager
 #include "shared/battle/Buff.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 
 #ifdef min

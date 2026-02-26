@@ -5,7 +5,7 @@
 #include "../movement/Movement.hpp"
 #include "core/network/NotificationService.hpp"
 #include "core/database/SkillDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <unordered_map>
 #include <algorithm>
 #include <numeric>

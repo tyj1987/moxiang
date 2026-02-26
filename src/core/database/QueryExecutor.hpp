@@ -1,7 +1,7 @@
 #pragma once
 
 #include "libpq_wrapper.hpp"
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 #include <memory>
 #include <functional>

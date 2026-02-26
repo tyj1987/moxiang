@@ -3,7 +3,7 @@
 
 #include "SkillArea.hpp"
 #include "../game/GameObject.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <fstream>
 #include <sstream>
 #include <cmath>

@@ -1,5 +1,5 @@
 #include "DatabaseUtils.hpp"
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <chrono>
 #include <ctime>
 #include <sstream>

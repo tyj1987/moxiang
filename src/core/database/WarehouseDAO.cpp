@@ -3,7 +3,7 @@
 #include "WarehouseDAO.hpp"
 #include "DatabasePool.hpp"
 #include "QueryExecutor.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace Core {

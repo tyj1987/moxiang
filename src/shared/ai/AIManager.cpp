@@ -1,7 +1,7 @@
 #include "AI.hpp"
 #include "shared/battle/Battle.hpp"
 #include "shared/character/CharacterManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 #include <chrono>

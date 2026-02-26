@@ -3,7 +3,7 @@
 
 #include "GameObject.hpp"
 #include "../utils/TimeUtils.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cmath>
 #include <sstream>
 

@@ -1,5 +1,5 @@
 #include "MessageRegistry.hpp"
-#include "spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 a
 using ConnectionPool = Murim::Core::Database::ConnectionPool;

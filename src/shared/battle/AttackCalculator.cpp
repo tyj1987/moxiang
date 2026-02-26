@@ -1,5 +1,5 @@
 #include "AttackCalculator.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include "PlayerxMonsterPointTable.hpp"
 #include <cstdlib>
 #include <algorithm>

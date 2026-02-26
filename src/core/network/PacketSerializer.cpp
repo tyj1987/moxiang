@@ -1,5 +1,5 @@
 #include "PacketSerializer.hpp"
-#include "spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cstring>
 

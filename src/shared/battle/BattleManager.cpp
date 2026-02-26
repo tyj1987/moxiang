@@ -4,7 +4,7 @@
 #include "../skill/SkillManager.hpp"
 #include "../skill/Skill.hpp"
 #include "shared/social/Party.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cmath>
 #include <algorithm>
 #include <cstdlib>

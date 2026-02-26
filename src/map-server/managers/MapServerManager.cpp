@@ -1,7 +1,7 @@
 #include "MapServerManager.hpp"
 #include "core/localization/LocalizationManager.hpp"
 #include "core/database/MonsterDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include "../../shared/battle/Buff.hpp"
 #include "../../shared/loot/Loot.hpp"
 #include "../../shared/npc/NPCHandler.hpp"

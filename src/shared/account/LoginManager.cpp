@@ -1,5 +1,5 @@
 #include "LoginManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <openssl/evp.h>
 #include <openssl/rand.h>
 #include <random>

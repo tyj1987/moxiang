@@ -4,7 +4,7 @@
 #include "SpecialStateManager.hpp"
 #include "../utils/TimeUtils.hpp"
 #include "../game/GameObject.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 

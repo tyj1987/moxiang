@@ -22,7 +22,7 @@ add_library(murim_database STATIC
 target_include_directories(murim_database
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/../..
+        ${CMAKE_CURRENT_SOURCE_DIR}${CMAKE_SOURCE_DIR}
 )
 
 # 查找依赖包

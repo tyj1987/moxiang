@@ -3,6 +3,7 @@ add_library(murim_core INTERFACE)
 
 target_include_directories(murim_core INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}  # For core/xxx.hpp access from any module
     D:/vcpkg/installed/x64-windows/include  # vcpkg include directory for spdlog, fmt, etc.
     "C:/Program Files/PostgreSQL/17/include"  # PostgreSQL headers
 )

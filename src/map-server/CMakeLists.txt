@@ -53,7 +53,7 @@ target_compile_features(murim_mapserver PUBLIC cxx_std_20)
 target_include_directories(murim_mapserver
     PRIVATE
     ${CMAKE_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}/../
+    D:/vcpkg/installed/x64-windows/include
     "C:/Program Files/PostgreSQL/17/include"
 )
 
@@ -169,7 +169,7 @@ if(WIN32)
     )
     target_link_options(murim_mapserver PRIVATE
         /LIBPATH:D:/vcpkg/installed/x64-windows/lib
-        /LIBPATH:C:/Program Files/PostgreSQL/17/lib
+        /LIBPATH:"C:/Program Files/PostgreSQL/17/lib"
         # TODO: Abseil 库在 vcpkg 中不完整，暂时移除
         # /WHOLEARCHIVE:absl_log_flags.lib
         # /WHOLEARCHIVE:absl_log_internal_structured_proto.lib

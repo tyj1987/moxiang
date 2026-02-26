@@ -3,6 +3,8 @@ add_library(murim_spatial INTERFACE)
 
 target_include_directories(murim_spatial INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}
+    D:/vcpkg/installed/x64-windows/include
 )
 
 target_link_libraries(murim_spatial INTERFACE

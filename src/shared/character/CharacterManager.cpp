@@ -2,7 +2,7 @@
 #include "shared/movement/Movement.hpp"
 #include "core/network/NotificationService.hpp"
 #include "core/database/CharacterDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cmath>
 
 using ConnectionPool = Murim::Core::Database::ConnectionPool;

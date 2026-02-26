@@ -7,7 +7,8 @@ add_library(murim_protocol STATIC
 target_include_directories(murim_protocol
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/../..
+        ${CMAKE_SOURCE_DIR}
+        D:/vcpkg/installed/x64-windows/include
         ${GENERATED_PROTOBUF_PATH}
 )
 

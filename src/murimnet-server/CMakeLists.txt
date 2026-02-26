@@ -25,7 +25,8 @@ target_link_libraries(murim_murimnetserver
 # 包含头文件目录
 target_include_directories(murim_murimnetserver
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/..
+    ${CMAKE_SOURCE_DIR}
+    D:/vcpkg/installed/x64-windows/include
 )
 
 # Windows特定设置

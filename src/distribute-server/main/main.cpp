@@ -1,5 +1,5 @@
 #include "../managers/DistributeServerManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cstdlib>
 #include <csignal>
 #include <exception>

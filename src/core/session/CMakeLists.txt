@@ -13,6 +13,8 @@ target_link_libraries(murim_session
 target_include_directories(murim_session
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_SOURCE_DIR}
+        D:/vcpkg/installed/x64-windows/include
 )
 
 target_compile_features(murim_session PUBLIC cxx_std_20)

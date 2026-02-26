@@ -6,7 +6,7 @@
 #include <unordered_map>
 #include <memory>
 #include "shared/game/GameObject.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace MapServer {

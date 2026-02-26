@@ -1,6 +1,6 @@
 #include "Skill.hpp"
 #include "core/network/NotificationService.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <unordered_map>
 #include <algorithm>
 

@@ -1,5 +1,5 @@
 #include "NotificationService.hpp"
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cstring>
 
 // Windows headers may define macros that conflict with our code

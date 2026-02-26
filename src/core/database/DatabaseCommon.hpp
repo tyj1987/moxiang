@@ -2,7 +2,7 @@
 
 #include "DatabasePool.hpp"
 #include "QueryExecutor.hpp"
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace Core {

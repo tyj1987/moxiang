@@ -1,7 +1,7 @@
 #include "SpawnPointManager.hpp"
 #include "MapServerManager.hpp"
 #include "core/database/MonsterDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <random>
 

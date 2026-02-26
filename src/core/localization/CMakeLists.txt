@@ -23,5 +23,6 @@ target_link_libraries(murim_localization
 
 target_include_directories(murim_localization
     PUBLIC
-        ${CMAKE_SOURCE_DIR}/src
+        ${CMAKE_SOURCE_DIR}
+        D:/vcpkg/installed/x64-windows/include
 )

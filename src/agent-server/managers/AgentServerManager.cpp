@@ -1,5 +1,5 @@
 #include "AgentServerManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include "../../core/database/AccountDAO.hpp"
 #include "../../core/database/CharacterDAO.hpp"
 #include "../../core/security/RateLimiter.hpp"

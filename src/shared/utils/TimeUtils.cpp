@@ -2,7 +2,7 @@
 // 时间工具类实现
 
 #include "TimeUtils.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <ctime>
 #include <cstdio>
 #include <thread>

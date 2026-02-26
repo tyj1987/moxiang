@@ -6,7 +6,7 @@
 #include "../game/GameObject.hpp"
 #include "../game/Item.hpp"
 #include "../battle/SpecialStates.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 

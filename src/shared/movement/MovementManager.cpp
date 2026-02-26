@@ -1,6 +1,6 @@
 #include "Movement.hpp"
 #include "shared/character/CharacterManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cmath>
 #include <unordered_map>
 #include <algorithm>

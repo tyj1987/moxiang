@@ -1,6 +1,6 @@
 #include "GuildManager.hpp"
 #include "core/database/GuildDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <shared_mutex>
 
 using Murim::Core::Database::GuildDAO;

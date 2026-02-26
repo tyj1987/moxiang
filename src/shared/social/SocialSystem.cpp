@@ -4,7 +4,7 @@
 #include "SocialSystem.hpp"
 #include "../game/Player.hpp"
 #include "../game/GameObject.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 

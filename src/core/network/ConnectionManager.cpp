@@ -1,5 +1,5 @@
 #include "ConnectionManager.hpp"
-#include "spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace Core {

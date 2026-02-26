@@ -1,5 +1,5 @@
 #include "ItemDAO.hpp"
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <sstream>
 
 namespace Murim {

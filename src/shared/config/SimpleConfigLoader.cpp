@@ -2,7 +2,7 @@
 #include "../skill/SkillInfo.hpp"
 #include "../skill/SkillDatabase.hpp"
 #include "../game/GameObject.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <memory>
 
 // 静态成员初始化

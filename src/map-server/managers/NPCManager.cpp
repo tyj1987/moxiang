@@ -2,7 +2,7 @@
 
 #include "NPCManager.hpp"
 #include "core/database/NPCDAO.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 
 namespace Murim {

@@ -1,6 +1,6 @@
 #include "ItemMessageHandler.hpp"
 #include "../../protocol/item.pb.h"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <stdexcept>
 
 namespace Murim {

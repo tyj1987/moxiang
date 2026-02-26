@@ -5,7 +5,7 @@
 #include "../game/Monster.hpp"
 #include "../game/GameObject.hpp"
 #include "../utils/TimeUtils.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>

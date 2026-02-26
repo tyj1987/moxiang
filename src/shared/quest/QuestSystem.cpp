@@ -2,7 +2,7 @@
 // 任务系统实现 - 完全完成版本
 
 #include "QuestSystem.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 #include <chrono>

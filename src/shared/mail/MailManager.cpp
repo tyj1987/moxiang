@@ -1,7 +1,7 @@
 #include "MailManager.hpp"
 #include "core/database/CharacterDAO.hpp"
 #include "core/localization/LocalizationManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <chrono>
 

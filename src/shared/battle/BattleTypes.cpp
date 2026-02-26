@@ -2,7 +2,7 @@
 // 战场类型实现 - 公会锦标赛、门派战场、攻城战等
 
 #include "BattleTypes.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace Game {

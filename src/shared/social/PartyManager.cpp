@@ -3,7 +3,7 @@
 #include "core/database/CharacterDAO.hpp"
 #include "core/network/NotificationService.hpp"
 #include "shared/character/CharacterManager.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 #include <unordered_map>

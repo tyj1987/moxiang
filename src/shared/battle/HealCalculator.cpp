@@ -4,7 +4,7 @@
 #include "HealCalculator.hpp"
 #include "../game/GameObject.hpp"
 #include "../skill/SkillInfo.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>

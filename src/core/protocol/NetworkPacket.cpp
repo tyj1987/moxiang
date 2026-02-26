@@ -1,5 +1,5 @@
 #include "NetworkPacket.hpp"
-#include "spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <cstring>
 
 // 跨平台网络支持

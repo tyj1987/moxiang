@@ -2,7 +2,7 @@
 #include "../../core/network/PacketSerializer.hpp"
 #include "../../core/database/dao/AccountDAO.hpp"
 #include "../../core/database/dao/CharacterDAO.hpp"
-#include "spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <random>
 
 namespace Murim {

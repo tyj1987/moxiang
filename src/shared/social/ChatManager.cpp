@@ -1,6 +1,6 @@
 #include "Chat.hpp"
 #include "core/network/NotificationService.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <regex>
 #include "core/database/ChatDAO.hpp"
