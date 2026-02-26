@@ -4,24 +4,32 @@ REM Murim MMORPG MurimNetServer Startup Script
 REM =====================================================
 
 cd /d D:\moxiang-server
+title Murim MurimNetServer (Port 8500)
+color 0A
 
-echo =====================================================
+echo ========================================================
 echo       Murim MMORPG MurimNetServer
-echo =====================================================
-echo Starting MurimNetServer on port 8500...
-echo =====================================================
+echo ========================================================
+echo 端口: 8500
+echo 功能: 公会聊天、好友系统、市场、邮件
+echo ========================================================
 echo.
 
-REM Set PostgreSQL and vcpkg paths for DLL dependencies
+REM 设置依赖库路径
 set PATH=%PATH%;C:\Program Files\PostgreSQL\17\bin;D:\vcpkg\installed\x64-windows\bin
 
-REM Start MurimNetServer
-start "MurimNetServer" D:\moxiang-server\build\murimnet-server\Release\murim_murimnetserver.exe
+REM 检查可执行文件
+if not exist "build\murimnet-server\Release\murim_murimnetserver.exe" (
+    echo [错误] 找不到可执行文件，请先编译服务器
+    pause
+    exit /b 1
+)
 
-echo MurimNetServer started. Check console window for logs.
-echo Press any key to stop...
-pause >nul
+echo 启动 MurimNetServer...
+echo.
 
-echo Stopping MurimNetServer...
-taskkill /F /IM murim_murimnetserver.exe 2>nul
-echo MurimNetServer stopped.
+"build\murimnet-server\Release\murim_murimnetserver.exe"
+
+echo.
+echo MurimNetServer 已停止。
+pause
