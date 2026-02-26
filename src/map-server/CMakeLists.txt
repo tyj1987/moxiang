@@ -2,17 +2,17 @@
 cmake_minimum_required(VERSION 3.15)
 
 # ============== Protocol Buffers ==============
-find_package(protobuf CONFIG REQUIRED)
-find_package(absl CONFIG REQUIRED)
+# find_package(protobuf CONFIG REQUIRED)  # Using vcpkg paths directly
+# find_package(absl CONFIG REQUIRED)  # Using vcpkg paths directly
 
 # 包含生成的 Protocol Buffers 头文件
 include_directories(
-    ${CMAKE_SOURCE_DIR}/src/protocol
+    ${CMAKE_SOURCE_DIR}/protocol
 )
 
 # 收集 Protocol Buffers 生成的文件
-file(GLOB PROTO_SRCS ${CMAKE_SOURCE_DIR}/src/protocol/*.cc)
-file(GLOB PROTO_HDRS ${CMAKE_SOURCE_DIR}/src/protocol/*.h)
+file(GLOB PROTO_SRCS ${CMAKE_SOURCE_DIR}/protocol/*.cc)
+file(GLOB PROTO_HDRS ${CMAKE_SOURCE_DIR}/protocol/*.h)
 
 # 显示找到的文件（调试用）
 message(STATUS "Protocol Buffers source files:")
@@ -23,7 +23,7 @@ endforeach()
 # 创建 Protocol Buffers 库
 add_library(murim_protocol STATIC ${PROTO_SRCS})
 target_link_libraries(murim_protocol PRIVATE "D:/vcpkg/installed/x64-windows/lib/libprotobuf.lib")
-target_include_directories(murim_protocol PUBLIC ${CMAKE_SOURCE_DIR}/src/protocol "D:/vcpkg/installed/x64-windows/include")
+target_include_directories(murim_protocol PUBLIC ${CMAKE_SOURCE_DIR}/protocol "D:/vcpkg/installed/x64-windows/include")
 
 # ============== MapServer Sources ==============
 set(MAP_SERVER_SOURCES
@@ -52,7 +52,9 @@ target_compile_features(murim_mapserver PUBLIC cxx_std_20)
 # 包含头文件目录
 target_include_directories(murim_mapserver
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/../
+    "C:/Program Files/PostgreSQL/17/include"
 )
 
 # 链接依赖库
@@ -61,6 +63,11 @@ target_link_libraries(murim_mapserver
     murim_protocol
     "D:/vcpkg/installed/x64-windows/lib/libprotobuf.lib"
     "D:/vcpkg/installed/x64-windows/lib/spdlog.lib"
+    # PostgreSQL 库
+    "C:/Program Files/PostgreSQL/17/lib/libpq.lib"
+    ws2_32
+    secur32
+    advapi32
     # Abseil 日志库 (手动编译完整版本)
     "D:/vcpkg/installed/x64-windows/lib/absl_log_internal_message.lib"
     "D:/vcpkg/installed/x64-windows/lib/absl_log_internal_check_op.lib"
@@ -162,6 +169,7 @@ if(WIN32)
     )
     target_link_options(murim_mapserver PRIVATE
         /LIBPATH:D:/vcpkg/installed/x64-windows/lib
+        /LIBPATH:C:/Program Files/PostgreSQL/17/lib
         # TODO: Abseil 库在 vcpkg 中不完整，暂时移除
         # /WHOLEARCHIVE:absl_log_flags.lib
         # /WHOLEARCHIVE:absl_log_internal_structured_proto.lib

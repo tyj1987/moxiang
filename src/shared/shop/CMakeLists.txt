@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 # 商店系统库
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 add_library(murim_shop STATIC
     ShopManager.cpp

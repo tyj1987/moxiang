@@ -1,7 +1,7 @@
 # Marriage System Library
 cmake_minimum_required(VERSION 3.15)
 
-find_package(fmt CONFIG REQUIRED)
+# find_package(fmt CONFIG REQUIRED)  # Using vcpkg paths directly
 
 set(MARRIAGE_SOURCES
     MarriageManager.cpp
@@ -33,7 +33,7 @@ target_include_directories(murim_marriage
 target_link_libraries(murim_marriage
     PUBLIC
         murim_protocol
-        fmt::fmt
+        "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
         murim_core
         murim_network
 )

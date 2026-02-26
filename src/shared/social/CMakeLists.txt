@@ -13,7 +13,8 @@ add_library(murim_social STATIC
 target_include_directories(murim_social
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_SOURCE_DIR}/src
+        ${CMAKE_SOURCE_DIR}
+        D:/vcpkg/installed/x64-windows/include
 )
 
 target_link_libraries(murim_social
@@ -23,3 +24,10 @@ target_link_libraries(murim_social
 )
 
 target_compile_features(murim_social PUBLIC cxx_std_20)
+
+# 设置 header-only spdlog
+target_compile_definitions(murim_social PUBLIC SPDLOG_HEADER_ONLY)
+
+target_link_libraries(murim_social PUBLIC
+    "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
+)

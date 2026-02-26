@@ -14,7 +14,7 @@ target_compile_features(murim_agentserver PUBLIC cxx_std_20)
 # 包含头文件目录
 target_include_directories(murim_agentserver
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/..
 )
 
 # 链接依赖

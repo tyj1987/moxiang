@@ -1,6 +1,6 @@
 #include "Quest.hpp"
 #include "core/network/NotificationService.hpp"
-#include "../../core/spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 #include <algorithm>
 #include <fmt/core.h>
 #include "core/database/QuestDAO.hpp"

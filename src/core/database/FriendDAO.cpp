@@ -3,7 +3,7 @@
 #include "DatabasePool.hpp"
 #include "QueryExecutor.hpp"
 #include "shared/social/Friend.hpp"  // Full type definitions
-#include "../spdlog_wrapper.hpp"
+#include "core/spdlog_wrapper.hpp"
 
 namespace Murim {
 namespace Core {

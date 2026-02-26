@@ -14,16 +14,16 @@ target_compile_features(murim_title PUBLIC cxx_std_17)
 
 # 包含目录
 target_include_directories(murim_title PUBLIC
-    ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/third_party/protobuf-29.5/include
-    ${CMAKE_SOURCE_DIR}/third_party/spdlog-1.14.1/include
+    ${CMAKE_SOURCE_DIR}
+    D:/vcpkg/installed/x64-windows/include
 )
 
 # 链接库
 target_link_libraries(murim_title PUBLIC
-    murim_protocol
-    libprotobuf
-    spdlog_header_only
+    "D:/vcpkg/installed/x64-windows/lib/libprotobuf.lib"
+    "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
+    murim_core
+    murim_shared
 )
 
 # 设置输出目录

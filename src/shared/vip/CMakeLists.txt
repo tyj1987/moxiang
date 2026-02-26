@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-find_package(fmt CONFIG REQUIRED)
+# find_package(fmt CONFIG REQUIRED)  # Using vcpkg paths directly
 
 # 创建静态库
 add_library(murim_vip STATIC
@@ -19,15 +19,16 @@ target_compile_definitions(murim_vip PUBLIC SPDLOG_HEADER_ONLY)
 
 # 包含目录
 target_include_directories(murim_vip PUBLIC
-    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}
     D:/vcpkg/installed/x64-windows/include
 )
 
 # 链接库
 target_link_libraries(murim_vip PUBLIC
-    murim_protocol
-    fmt::fmt
+    "D:/vcpkg/installed/x64-windows/lib/libprotobuf.lib"
+    "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
     murim_core
+    murim_shared
 )
 
 # 设置输出目录

@@ -1,7 +1,7 @@
 # Dungeon System Library
 cmake_minimum_required(VERSION 3.15)
 
-find_package(fmt CONFIG REQUIRED)
+# find_package(fmt CONFIG REQUIRED)  # Using vcpkg paths directly
 
 # 设置库名称
 set(DUNGEON_SOURCES
@@ -35,7 +35,7 @@ target_include_directories(murim_dungeon
 target_link_libraries(murim_dungeon
     PUBLIC
         murim_protocol
-        fmt::fmt
+        "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
         murim_core
         murim_network
 )

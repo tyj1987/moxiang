@@ -3,6 +3,9 @@ add_library(murim_shared INTERFACE)
 
 target_include_directories(murim_shared INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}              # For protocol/ directory
+    ${CMAKE_SOURCE_DIR}/core         # For core/ headers
+    "C:/Program Files/PostgreSQL/17/include"  # For libpq-fe.h
 )
 
 # ============== Utils ==============

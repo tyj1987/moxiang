@@ -1,10 +1,14 @@
 #include "ServerConnection.hpp"
 #include "IOContext.hpp"
 #include "spdlog_wrapper.hpp"
-#include <boost/asio/placeholders.hpp>
 #include <thread>
 #include <algorithm>
 #include <cstring>
+
+// Use Boost placeholders without bringing them into global scope
+namespace {
+    namespace placeholders = boost::asio::placeholders;
+}
 
 namespace Murim {
 namespace Core {

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 # 邮件系统库
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 add_library(murim_mail STATIC
     MailManager.cpp

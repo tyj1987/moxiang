@@ -1,7 +1,7 @@
 # Sign-in System Library
 cmake_minimum_required(VERSION 3.15)
 
-find_package(fmt CONFIG REQUIRED)
+# find_package(fmt CONFIG REQUIRED)  # Using vcpkg paths directly
 
 # 设置库名称
 set(SIGNIN_SOURCES
@@ -34,7 +34,7 @@ target_include_directories(murim_signin
 target_link_libraries(murim_signin
     PUBLIC
         murim_protocol
-        fmt::fmt
+        "D:/vcpkg/installed/x64-windows/lib/fmt.lib"
         murim_core
         murim_network
 )

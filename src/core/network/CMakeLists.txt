@@ -1,4 +1,4 @@
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 add_library(murim_network STATIC
     IOContext.cpp
@@ -14,13 +14,12 @@ add_library(murim_network STATIC
     NotificationService.cpp
 )
 
-# Boost.Asio - use Boost::headers for header-only components
-find_package(Boost REQUIRED)
+# Boost.Asio - use vcpkg include path for header-only components
+# find_package(Boost REQUIRED)  # Not needed, using vcpkg paths directly
 
 target_link_libraries(murim_network
     PUBLIC
         murim_core
-        Boost::headers
         ws2_32  # Windows Socket库
 )
 

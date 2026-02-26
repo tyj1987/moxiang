@@ -21,7 +21,7 @@ target_link_libraries(murim_distributeserver
 # 包含头文件目录
 target_include_directories(murim_distributeserver
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/..
 )
 
 # Windows特定设置

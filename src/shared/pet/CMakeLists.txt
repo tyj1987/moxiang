@@ -1,4 +1,4 @@
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 # Pet System Library
 # 宠物系统 - 宠物捕捉、养成、进化、战斗
@@ -24,7 +24,7 @@ target_link_libraries(murim_pet PUBLIC
     murim_protocol
     murim_core
     murim_database
-    spdlog::spdlog_header_only
+    # spdlog::spdlog_header_only  # Using header-only from vcpkg
 )
 
 # 设置输出目录

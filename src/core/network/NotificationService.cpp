@@ -1,6 +1,10 @@
 #include "NotificationService.hpp"
-#include "spdlog_wrapper.hpp"
+#include "../spdlog_wrapper.hpp"
 #include <cstring>
+
+// Windows headers may define macros that conflict with our code
+// We avoid including windows.h here since we're not using Windows-specific APIs
+// If needed, use specific headers like <winsock2.h> instead
 
 namespace Murim {
 namespace Core {
@@ -218,57 +222,61 @@ void NotificationService::NotifyPartyLeft(uint64_t character_id) {
 
 // ========== 聊天相关通知 ==========
 
-void NotificationService::SendChatMessage(uint64_t character_id, uint8_t channel, uint64_t sender_id, const std::string& sender_name, const std::string& message) {
+void NotificationService::SendChatMessage(uint64_t character_id, uint8_t channel, uint64_t sender_id, const std::string& sender_name, const std::string& message_param)
+{
     struct ChatMessageData {
         uint8_t channel;
         uint64_t sender_id;
         char sender_name[32];
-        char message[256];  // 最大消息长度
-    };
+        char msg_content[256];
+    } chat_data;
 
-    ChatMessageData data;
-    data.channel = channel;
-    data.sender_id = sender_id;
-    memset(data.sender_name, 0, sizeof(data.sender_name));
-    memset(data.message, 0, sizeof(data.message));
+    chat_data.channel = channel;
+    chat_data.sender_id = sender_id;
+    memset(chat_data.sender_name, 0, sizeof(chat_data.sender_name));
+    memset(chat_data.msg_content, 0, sizeof(chat_data.msg_content));
 
-    strncpy(data.sender_name, sender_name.c_str(), sizeof(data.sender_name) - 1);
-    data.sender_name[sizeof(data.sender_name) - 1] = '\0';
-    strncpy(data.message, message.c_str(), sizeof(data.message) - 1);
-    data.message[sizeof(data.message) - 1] = '\0';
+    strncpy(chat_data.sender_name, sender_name.c_str(), sizeof(chat_data.sender_name) - 1);
+    chat_data.sender_name[sizeof(chat_data.sender_name) - 1] = '\0';
+    strncpy(chat_data.msg_content, message_param.c_str(), sizeof(chat_data.msg_content) - 1);
+    chat_data.msg_content[sizeof(chat_data.msg_content) - 1] = '\0';
 
-    SendToCharacter(character_id, MessageType::kChatMessage, &data, sizeof(data));
+    SendToCharacter(character_id, MessageType::kChatMessage, &chat_data, sizeof(chat_data));
 }
 
 // ========== 系统相关通知 ==========
 
-void NotificationService::SendSystemMessage(uint64_t character_id, const std::string& message) {
+void NotificationService::SendSystemMessage(uint64_t character_id, const std::string& message_param)
+{
     struct SystemMessageData {
-        char message[512];
-    } data{};
+        char msg_content[512];
+    } sys_msg_data;
 
-    strncpy(data.message, message.c_str(), sizeof(data.message) - 1);
-    data.message[sizeof(data.message) - 1] = '\0';
+    memset(sys_msg_data.msg_content, 0, sizeof(sys_msg_data.msg_content));
+    strncpy(sys_msg_data.msg_content, message_param.c_str(), sizeof(sys_msg_data.msg_content) - 1);
+    sys_msg_data.msg_content[sizeof(sys_msg_data.msg_content) - 1] = '\0';
 
     if (character_id == 0) {
-        // 广播给所有人
-        Broadcast(MessageType::kSystemMessage, &data, sizeof(data));
+        Broadcast(MessageType::kSystemMessage, &sys_msg_data, sizeof(sys_msg_data));
     } else {
-        SendToCharacter(character_id, MessageType::kSystemMessage, &data, sizeof(data));
+        SendToCharacter(character_id, MessageType::kSystemMessage, &sys_msg_data, sizeof(sys_msg_data));
     }
-    spdlog::info("System message to {}: {}", character_id, message);
+    spdlog::info("System message to {}: {}", character_id, message_param);
 }
 
-void NotificationService::SendErrorMessage(uint64_t character_id, uint32_t error_code, const std::string& message) {
+void NotificationService::SendErrorMessage(uint64_t character_id, uint32_t error_code, const std::string& message_param)
+{
     struct ErrorMessageData {
         uint32_t error_code;
-        char message[256];
-    } data{ error_code, {} };
+        char msg_content[256];
+    } err_msg_data;
 
-    strncpy(data.message, message.c_str(), sizeof(data.message) - 1);
-    data.message[sizeof(data.message) - 1] = '\0';
-    SendToCharacter(character_id, MessageType::kErrorMessage, &data, sizeof(data));
-    spdlog::warn("Error message to {} (code {}): {}", character_id, error_code, message);
+    memset(&err_msg_data, 0, sizeof(err_msg_data));
+    err_msg_data.error_code = error_code;
+    strncpy(err_msg_data.msg_content, message_param.c_str(), sizeof(err_msg_data.msg_content) - 1);
+    err_msg_data.msg_content[sizeof(err_msg_data.msg_content) - 1] = '\0';
+    SendToCharacter(character_id, MessageType::kErrorMessage, &err_msg_data, sizeof(err_msg_data));
+    spdlog::warn("Error message to {} (code {}): {}", character_id, error_code, message_param);
 }
 
 } // namespace Network

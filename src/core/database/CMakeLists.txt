@@ -26,7 +26,7 @@ target_include_directories(murim_database
 )
 
 # 查找依赖包
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 # Windows特定的预处理器定义
 if(WIN32)
@@ -42,7 +42,7 @@ endif()
 if(WIN32)
     target_include_directories(murim_database
         PUBLIC
-            "C:/Program Files/PostgreSQL/18/include"
+            "C:/Program Files/PostgreSQL/17/include"
     )
 endif()
 
@@ -51,7 +51,7 @@ endif()
 # ============================================
 target_link_libraries(murim_database
     PUBLIC
-        "C:/Program Files/PostgreSQL/18/lib/libpq.lib"  # 使用系统安装的libpq
+        "C:/Program Files/PostgreSQL/17/lib/libpq.lib"  # 使用系统安装的libpq
         ws2_32                    # Windows sockets
         secur32                   # Windows security
         advapi32                  # Windows crypto API (for SHA-256)

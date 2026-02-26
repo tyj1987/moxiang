@@ -1,5 +1,5 @@
 # ============== 安全层 ==============
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 add_library(murim_security STATIC
     RateLimiter.cpp

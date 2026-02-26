@@ -1,7 +1,7 @@
 # Localization library
 cmake_minimum_required(VERSION 3.15)
 
-find_package(spdlog CONFIG REQUIRED)
+# find_package(spdlog CONFIG REQUIRED)  # Using header-only from vcpkg
 
 set(LOCALIZATION_SOURCES
     LocalizationManager.cpp
@@ -18,7 +18,7 @@ target_compile_features(murim_localization PUBLIC cxx_std_20)
 
 target_link_libraries(murim_localization
     PUBLIC
-        spdlog::spdlog_header_only
+        # spdlog::spdlog_header_only  # Using header-only from vcpkg
 )
 
 target_include_directories(murim_localization
