@@ -1,0 +1,39 @@
+find_package(spdlog CONFIG REQUIRED)
+
+add_library(murim_network STATIC
+    IOContext.cpp
+    Connection.cpp
+    Session.cpp
+    Acceptor.cpp
+    SessionManager.cpp
+    ConnectionManager.cpp
+    PacketSerializer.cpp
+    ByteBuffer.cpp
+    ServerMessage.cpp
+    ServerConnection.cpp
+    NotificationService.cpp
+)
+
+# Boost.Asio - use Boost::headers for header-only components
+find_package(Boost REQUIRED)
+
+target_link_libraries(murim_network
+    PUBLIC
+        murim_core
+        Boost::headers
+        ws2_32  # Windows Socket库
+)
+
+target_include_directories(murim_network
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/../..
+)
+
+target_compile_features(murim_network PUBLIC cxx_std_17)
+
+# ============== 安装 ==============
+install(TARGETS murim_network
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+)

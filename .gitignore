@@ -1,0 +1,31 @@
+# C++ build artifacts
+build/
+bin/
+lib/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+CMakeCache.txt
+CTestTestfile.cmake
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vs/
+.vscode/
+.idea/
