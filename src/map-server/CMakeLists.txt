@@ -148,9 +148,8 @@ target_link_libraries(murim_mapserver
     murim_title
     murim_vip
     murim_dungeon
-    # TODO: 需要重构 - 使用 pqxx 而不是 libpq
-    # murim_signin
-    # murim_marriage
+    murim_signin
+    murim_marriage
     # TODO: API 不匹配需要重构
     # murim_pet
     # murim_mount
