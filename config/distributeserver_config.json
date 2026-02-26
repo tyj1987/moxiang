@@ -1,0 +1,24 @@
+{
+  "server_id": 8000,
+  "server_name": "DistributeServer",
+  "network": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 8000,
+    "max_connections": 5000
+  },
+  "load_balancing": {
+    "strategy": "least_connected",
+    "heartbeat_timeout": 30000,
+    "stale_timeout": 30000
+  },
+  "map_servers": [
+    {
+      "server_id": 9001,
+      "map_id": 1,
+      "server_name": "Main World",
+      "listen_ip": "127.0.0.1",
+      "listen_port": 9001,
+      "max_players": 1000
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "server_id": 7000,
+  "server_name": "AgentServer",
+  "network": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 7000,
+    "max_connections": 2000,
+    "max_packet_size": 4096
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "mh_game",
+    "user": "postgres",
+    "password": "",
+    "connection_pool_size": 10
+  },
+  "session": {
+    "cleanup_interval": 60,
+    "session_timeout": 1800
+  },
+  "security": {
+    "rate_limit_enabled": true,
+    "max_login_attempts": 5,
+    "rate_limit_window": 60
+  }
+}

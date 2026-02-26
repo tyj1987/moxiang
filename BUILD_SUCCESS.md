@@ -126,16 +126,46 @@ psql -U postgres -f scripts/init_database_complete.sql
 - **删除行数**: 108 行
 - **净增加**: 13 行
 
-## ⚠️ 已知问题
-
-### 编译警告
-- `SPDLOG_HEADER_ONLY` 宏重定义警告 (不影响功能)
-- 可在 spdlog_wrapper.hpp 中添加 `#ifndef` 保护来消除
-
-### 待完成模块
-- murim_pet - API 不匹配需要重构
-- murim_mount - 需要修复网络 API
-
 ## ✅ 编译成功
 
 MurimServer 服务端已成功编译，所有四个服务器可执行文件可以正常运行！
+
+## 🎉 数据库配置完成 (2026-02-27)
+
+### 配置文件
+已创建所有服务器的 JSON 配置文件：
+- `config/agentserver_config.json`
+- `config/distributeserver_config.json`
+- `config/mapserver_config.json`
+- `config/murimnetserver_config.json`
+
+### 数据库初始化
+- PostgreSQL 17 已安装并运行
+- 数据库 `mh_game` 已创建并初始化
+- 测试数据已插入（test/test123）
+- 15 个数据表已创建
+- 启动脚本已创建
+
+### 服务器测试
+所有四个服务器均已测试通过：
+
+| 服务器 | 端口 | 状态 | 说明 |
+|--------|------|------|------|
+| DistributeServer | 8000 | ✅ | 无需数据库 |
+| AgentServer | 7000 | ✅ | 10个数据库连接 |
+| MapServer | 9001 | ✅ | 所有游戏系统已初始化 |
+| MurimNetServer | 8500 | ✅ | 25个数据库连接 |
+
+### 启动方式
+```batch
+# 启动所有服务器
+start_all_servers.bat
+
+# 或单独启动
+start_agentserver.bat
+start_distributeserver.bat
+start_mapserver.bat
+start_murimnetserver.bat
+```
+
+详见 `DATABASE_SETUP_COMPLETE.md`

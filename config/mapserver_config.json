@@ -1,0 +1,33 @@
+{
+  "server_id": 9001,
+  "server_name": "MapServer-MainWorld",
+  "map_id": 1,
+  "network": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 9001,
+    "max_connections": 1000
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "mh_game",
+    "user": "postgres",
+    "password": "",
+    "connection_pool_size": 10
+  },
+  "game": {
+    "tick_rate": 100,
+    "ai_process_interval": 3000,
+    "world_bounds": {
+      "min_x": 0,
+      "min_y": 0,
+      "max_x": 10000,
+      "max_y": 10000
+    },
+    "max_players": 1000
+  },
+  "localization": {
+    "language": "chinese",
+    "locale_path": "locales/"
+  }
+}

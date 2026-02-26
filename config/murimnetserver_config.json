@@ -1,0 +1,25 @@
+{
+  "server_id": 8500,
+  "server_name": "MurimNetServer",
+  "network": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 8500,
+    "max_connections": 5000
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "mh_game",
+    "user": "postgres",
+    "password": "",
+    "connection_pool_size": 25
+  },
+  "features": {
+    "guild": true,
+    "party": true,
+    "chat": true,
+    "mail": true,
+    "market": true
+  },
+  "tick_rate": 100
+}
